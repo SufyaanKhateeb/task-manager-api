@@ -1,7 +1,5 @@
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
-const { join } = require('path')
-require('dotenv').config({path: join(__dirname, '..', '..', './config/dev.env')})
 
 const auth = async (req, res, next) => {
     try {

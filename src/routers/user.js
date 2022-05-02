@@ -82,7 +82,7 @@ router.delete('/users/me', auth, async (req, res) => {
         // }
 
         // same as above
-        req.user.remove()
+        await req.user.remove()
         sendDeleteEmail(req.user.email, req.user.name)
         res.send({ user: req.user , Result: "User deleted" })
     } catch (e) {

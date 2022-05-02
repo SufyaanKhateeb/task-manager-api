@@ -1,8 +1,6 @@
 const { info } = require("console")
 const nodemailer = require("nodemailer")
 const Mail = require("nodemailer/lib/mailer")
-const { join } = require('path')
-require('dotenv').config({path: join(__dirname, '..', '..', './config/dev.env')})
 
 // step 1
 let transporter = nodemailer.createTransport({
